@@ -1,5 +1,7 @@
 # User Auth API
 
+[![Tests](https://github.com/Fralonso16/user-auth-api/actions/workflows/tests.yml/badge.svg)](https://github.com/Fralonso16/user-auth-api/actions/workflows/tests.yml)
+
 API REST con registro, login y autenticación mediante JWT (JSON Web Tokens). Cada usuario solo puede ver y crear sus propios datos, construida como proyecto de práctica para aprender autenticación en backend.
 
 ## Tecnologías
