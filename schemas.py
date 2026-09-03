@@ -16,8 +16,7 @@ class UserOut(BaseModel):
     id: int
     username: str
 
-    class Config:
-        from_attributes = True
+    model_config = {"from_attributes": True}
 
 
 # --- Schema del token ---
@@ -39,5 +38,4 @@ class ItemOut(BaseModel):
     title: str
     owner_id: int
 
-    class Config:
-        from_attributes = True
+    model_config = {"from_attributes": True}

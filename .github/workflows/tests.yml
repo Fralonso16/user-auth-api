@@ -1,0 +1,34 @@
+# Nombre del workflow, se ve en la pestaña "Actions" de GitHub
+name: Tests
+
+# Cuando se ejecuta: en cada push y en cada pull request contra main
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Descarga tu codigo en la maquina temporal de GitHub
+      - name: Descargar el codigo
+        uses: actions/checkout@v4
+
+      # Instala Python en esa maquina temporal
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Instala las dependencias del proyecto + las de testing
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          pip install pytest httpx
+
+      # Ejecuta los tests (usan la BD en memoria, no tocan nada real)
+      - name: Ejecutar tests
+        run: pytest
