@@ -50,6 +50,31 @@ uvicorn main:app --reload
 http://127.0.0.1:8000/docs
 
 
+## Cómo ejecutarlo con Docker
+
+No necesitas instalar Python ni nada manualmente, solo tener Docker instalado.
+
+1. Clona el repositorio y entra en la carpeta:
+
+git clone https://github.com/Fralonso16/user-auth-api.git
+cd user-auth-api
+
+
+2. Construye la imagen:
+
+docker build -t user-auth-api .
+
+
+3. Ejecuta el contenedor:
+
+docker run -p 8000:8000 user-auth-api
+
+
+4. Abre la documentación interactiva en:
+
+http://127.0.0.1:8000/docs
+
+
 ## Cómo probarlo
 
 1. Regístrate con `POST /register`
