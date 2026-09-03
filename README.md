@@ -76,6 +76,16 @@ docker run -p 8000:8000 user-auth-api
 
 http://127.0.0.1:8000/docs
 
+## Frontend
+
+Este proyecto incluye un frontend simple (HTML/CSS/JavaScript, sin frameworks) en la carpeta `frontend/`, que consume esta misma API: registro, login, y gestión de items del usuario autenticado.
+
+### Cómo ejecutarlo
+
+1. Arranca la API (ver arriba)
+2. Abre `frontend/index.html` con la extensión Live Server de VS Code (o cualquier servidor estático)
+3. Regístrate, inicia sesión, y crea/consulta tus items desde la interfaz
+
 
 ## Cómo probarlo
 

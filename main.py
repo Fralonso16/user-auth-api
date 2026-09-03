@@ -16,6 +16,23 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="User Auth API")
 
+# CORSMiddleware: por defecto, un navegador bloquea que una pagina web
+# en un dominio/puerto llame a una API en otro dominio/puerto (por
+# seguridad). Esto le dice a la API que permita peticiones desde el
+# origen donde correra nuestro frontend.
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    # En un proyecto real, aqui pondrias el dominio exacto de tu frontend.
+    # Para aprender y desarrollar en local, permitimos estos dos origenes
+    # tipicos de un servidor de archivos estatico simple.
+    allow_origins=["http://localhost:5500", "http://127.0.0.1:5500"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Le dice a FastAPI que espere el token en la cabecera Authorization,
 # y que la ruta para OBTENER ese token es "/login" (usada en la doc interactiva)
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")

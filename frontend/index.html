@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Auth API - Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>User Auth API</h1>
+
+        <!-- Vista de LOGIN / REGISTRO: se muestra cuando no hay sesion iniciada -->
+        <div id="auth-view">
+            <h2>Iniciar sesión</h2>
+            <input type="text" id="login-username" placeholder="Usuario">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <button id="login-btn">Entrar</button>
+
+            <h2>Registrarse</h2>
+            <input type="text" id="register-username" placeholder="Usuario">
+            <input type="password" id="register-password" placeholder="Contraseña">
+            <button id="register-btn">Crear cuenta</button>
+
+            <p id="auth-message"></p>
+        </div>
+
+        <!-- Vista de DASHBOARD: se muestra solo cuando el usuario esta autenticado -->
+        <div id="dashboard-view" style="display: none;">
+            <h2>Hola, <span id="welcome-username"></span></h2>
+            <button id="logout-btn">Cerrar sesión</button>
+
+            <h3>Tus items</h3>
+            <input type="text" id="new-item-title" placeholder="Nuevo item">
+            <button id="add-item-btn">Añadir</button>
+
+            <ul id="items-list"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
