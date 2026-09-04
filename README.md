@@ -4,6 +4,13 @@
 
 API REST con registro, login y autenticación mediante JWT (JSON Web Tokens). Cada usuario solo puede ver y crear sus propios datos, construida como proyecto de práctica para aprender autenticación en backend.
 
+## 🔗 Demo en vivo
+
+- **Frontend**: https://user-auth-api-frontend.onrender.com
+- **API (Swagger)**: https://user-auth-api-ro55.onrender.com/docs
+
+> Nota: al usar el plan gratuito de Render, el servicio puede "dormir" tras un rato de inactividad. La primera petición puede tardar unos segundos en responder mientras se reactiva.
+
 ## Tecnologías
 
 - **Python 3**
