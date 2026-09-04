@@ -1,5 +1,5 @@
 // URL base de tu API - ejecutandose en local con uvicorn
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://user-auth-api-ro55.onrender.com";
 
 // Referencias a los elementos del HTML que vamos a usar
 const authView = document.getElementById("auth-view");
