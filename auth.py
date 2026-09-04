@@ -12,7 +12,13 @@ from jose import jwt, JWTError
 # En un proyecto real, esto NUNCA se escribe así en el código: se guarda en
 # una variable de entorno (archivo .env). Aquí la ponemos directamente
 # solo para aprender; en el proyecto 3 veremos cómo hacerlo bien.
-SECRET_KEY = "clave-secreta-de-desarrollo-cambiar-en-produccion"
+import os
+
+# Lee la clave secreta desde una variable de entorno. Si no existe (por
+# ejemplo, en tu ordenador en local), usa un valor de respaldo solo para
+# desarrollo - en Render, configuraremos la variable real por fuera del
+# codigo, para que nunca quede expuesta en el repositorio.
+SECRET_KEY = os.getenv("SECRET_KEY", "clave-secreta-de-desarrollo-cambiar-en-produccion")
 
 # ALGORITHM: el algoritmo usado para firmar el token
 ALGORITHM = "HS256"
