@@ -27,7 +27,11 @@ app.add_middleware(
     # En un proyecto real, aqui pondrias el dominio exacto de tu frontend.
     # Para aprender y desarrollar en local, permitimos estos dos origenes
     # tipicos de un servidor de archivos estatico simple.
-    allow_origins=["http://localhost:5500", "http://127.0.0.1:5500"],
+    allow_origins=[
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+    "https://user-auth-api-frontend.onrender.com",
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
